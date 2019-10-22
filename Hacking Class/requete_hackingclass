@@ -1,0 +1,3 @@
+RELATION POUR STRUCTURE:
+
+SELECT * FROM Student JOIN Cours ON Cours.id = Student.id_cours

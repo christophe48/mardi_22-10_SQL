@@ -1,0 +1,6 @@
+- Table Student					id integer (primary key)
+								        name text
+								        #id_cours (foreign key from Cours)
+
+- Table Cours					id integer (primary key)
+								      content text

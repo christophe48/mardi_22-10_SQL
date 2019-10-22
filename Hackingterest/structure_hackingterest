@@ -1,0 +1,11 @@
+- Table User					id integer (primary key)
+								      name text
+
+- Table Pins					id integer (primary key)
+								      url text
+								      #id_user (foreign key from User)
+
+- Table Comment				id integer (primary key)
+								      content text
+								      #id_user (foreign key from User)
+								      #id_pins (foreign key from Pins)

@@ -1,0 +1,32 @@
+SQlite3 chinook.db
+
+Pour voir les champs présents dans une table il faut mettre : .headers on et .mode column et ensuite Mettre SELECT * FROM ta_table LIMIT 1
+
+1- Récupérer tous les albums
+SELECT * FROM albums;
+
+2- Récupérer tous les albums dont le titre contient "Great" (indice)
+SELECT * FROM albums WHERE Title LIKE '%great%';
+
+3- Donner le nombre total d'albums contenus dans la base (sans regarder les id bien sûr)
+SELECT COUNT() FROM Albums;
+
+4- Supprimer tous les albums dont le nom contient "music"
+DELETE FROM Albums WHERE Title LIKE '%music%';
+
+5- Récupérer tous les albums écrits par AC/DC
+SELECT * FROM Albums WHERE ArtistId = 1;
+
+6- Récupérer tous les titres des albums de AC/DC
+SELECT Title FROM Albums WHERE ArtistId = 1;
+
+7- Récupérer la liste des titres de l'album "Let There Be Rock"
+SELECT Name FROM tracks WHERE tracks.AlbumId IN ( SELECT AlbumId FROM albums WHERE albums.Title='Let There Be Rock');
+
+8- Afficher le prix de cet album ainsi que sa durée totale
+SELECT SUM (UnitPrice) FROM tracks WHERE tracks.AlbumId IN (SELECT AlbumId FROM albums WHERE albums.Title='Let There Be Rock') UNION SELECT SUM (Milliseconds) FROM tracks WHERE tracks.AlbumId IN (SELECT AlbumId FROM albums WHERE albums.Title='Let There Be Rock');
+
+9- Afficher le coût de l'intégralité de la discographie de "Deep Purple"
+SELECT SUM (UnitPrice) FROM tracks WHERE tracks.AlbumId IN (SELECT AlbumId FROM albums WHERE albums.ArtistId IN ( SELECT ArtistId FROM artists WHERE artists.Name='Deep Purple'));
+
+10- Créer l'album de ton artiste favori en base, en renseignant correctement les trois tables albums, artists et tracks

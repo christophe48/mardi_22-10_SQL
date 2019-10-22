@@ -1,0 +1,9 @@
+RELATIONS POUR LA STRUCTURE
+
+SELECT * FROM Link JOIN User ON User.id = Link.id_user
+
+SELECT * FROM Comment JOIN User ON User.id = Comment.id_user
+
+SELECT * FROM Comment JOIN Link ON Link.id = Comment.id_link
+
+SELECT * FROM Commentofcomment JOIN Comment ON Comment.id = Commentofcomment.id_comment

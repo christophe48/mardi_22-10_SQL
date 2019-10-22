@@ -1,0 +1,2 @@
+Liens pour la structure
+SELECT * FROM Lesson JOIN Cours ON Cours.id = Lesson.id_cours

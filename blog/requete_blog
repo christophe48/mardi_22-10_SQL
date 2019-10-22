@@ -1,0 +1,9 @@
+RELATIONS POUR LA STRUCTURE :
+
+SELECT * FROM article JOIN user ON user.id = article.id_user;
+
+SELECT * FROM Category_Article JOIN Category ON category.id = Category_Article.category_id;
+
+SELECT * FROM Category_Article JOIN article ON article.id = Category_Article.article_id;
+
+SELECT * FROM Tag JOIN Category ON category.id = Tag.category_id

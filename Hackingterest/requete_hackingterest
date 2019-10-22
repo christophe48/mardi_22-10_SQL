@@ -1,0 +1,7 @@
+Relations de STRUCTURE
+
+SELECT * FROM Pins JOIN User ON User.id = Pins.id_user
+
+SELECT * FROM Comment JOIN User ON User.id = Comment.id_user
+
+SELECT * FROM Comment JOIN Pins ON Pins.id = Comment.id_pins

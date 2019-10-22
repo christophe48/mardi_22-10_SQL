@@ -1,0 +1,9 @@
+User (ID intenger (primary key), name text,)
+
+Article(ID intenger (primary key), name text, #id_user (foreign key from user) )
+
+Category(ID intenger (primary key), titre text)
+
+Category_Article( #category_id (foreign key from category), #article_id (foreign key from article))
+
+Tag( ID intenger (primary key), name text, color text, #category_id (foreign key from category))

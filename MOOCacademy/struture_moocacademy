@@ -1,0 +1,8 @@
+- Table Cours : 				id integer (primary key)
+								        title text
+								        description text
+
+- Table Lesson : 				id integer (primary key)
+								        title text
+								        body text
+								        id_cours (foreign key from Cours)
